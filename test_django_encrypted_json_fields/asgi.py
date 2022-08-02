@@ -1,5 +1,5 @@
 """
-ASGI config for test_django_encrypted_model_fields project.
+ASGI config for test_django_encrypted_json_fields project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_django_encrypted_model_fields.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_django_encrypted_json_fields.settings')
 
 application = get_asgi_application()

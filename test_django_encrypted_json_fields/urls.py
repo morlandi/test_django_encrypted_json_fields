@@ -1,4 +1,4 @@
-"""test_django_encrypted_model_fields URL Configuration
+"""test_django_encrypted_json_fields URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/

@@ -2,7 +2,7 @@
 
 def get_field_encryption_key():
 
-    from test_django_encrypted_model_fields.models import Key
+    from test_django_encrypted_json_fields.models import Key
 
     #cryptography.fernet.Fernet.generate_key()
 

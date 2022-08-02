@@ -3,7 +3,7 @@ from django.db import models
 from django.db import connection
 from django.utils.html import linebreaks
 from django.utils.safestring import mark_safe
-from encrypted_model_fields import fields
+from encrypted_json_fields import fields
 
 
 class Key(models.Model):
@@ -17,29 +17,33 @@ class Key(models.Model):
         return self.value
 
 
-class SampleModel(models.Model):
-    text_encrypted = fields.EncryptedCharField(max_length=100, null=False, blank=True, default="Sample text")
-    json_encrypted = fields.EncryptedJSONField(null=False, blank=True, default={
-        "str_value": "text",
-        "int_value": 123,
-        "float_value": 123.45,
-        "bool_value": True,
-        "list_value": [
+def adict():
+    return dict(
+        str_value="text",
+        int_value=123,
+        float_value=123.45,
+        bool_value=True,
+        list_value=[
             1,
             2,
             "three",
             False,
             5.0
         ],
-        "dict_value": {
-            "aaa": "AAA",
-            "bbb": "BBB",
-            "inner": {
-                "one": 1,
-                "two": 2
-            }
-        }
-    })
+        dict_value=dict(
+            aaa="AAA",
+            bbb="BBB",
+            inner=dict(
+                one=1,
+                two=2
+            )
+        )
+    )
+
+
+class SampleModel(models.Model):
+    text_encrypted = fields.EncryptedCharField(max_length=100, null=False, blank=True, default="Sample text")
+    json_encrypted = fields.EncryptedJSONField(null=False, blank=True, default=adict)
 
     def __str__(self):
         # if self.title:

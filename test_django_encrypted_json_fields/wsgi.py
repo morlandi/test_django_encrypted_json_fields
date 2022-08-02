@@ -1,5 +1,5 @@
 """
-WSGI config for test_django_encrypted_model_fields project.
+WSGI config for test_django_encrypted_json_fields project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_django_encrypted_model_fields.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_django_encrypted_json_fields.settings')
 
 application = get_wsgi_application()

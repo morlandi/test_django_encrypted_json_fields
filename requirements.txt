@@ -1,1 +1,4 @@
+django
+django-encrypted-json-fields
 django-light
+
