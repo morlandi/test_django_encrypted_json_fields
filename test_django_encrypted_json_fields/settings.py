@@ -133,3 +133,6 @@ FIELD_ENCRYPTION_KEY = get_field_encryption_key
 
 SHOW_RAW_FIELDS = True
 
+FIELD_SKIP_ENCRYPTION = False
+
+
