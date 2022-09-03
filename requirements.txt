@@ -1,4 +1,5 @@
 django
-django-encrypted-json-fields
 django-light
+#django-encrypted-json-fields
+-e ../django-encrypted-json-fields
 

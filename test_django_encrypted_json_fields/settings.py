@@ -129,10 +129,10 @@ STATIC_URL = '/static/'
 #FIELD_ENCRYPTION_KEY = os.environ.get('FIELD_ENCRYPTION_KEY', '5wGTKAR-R8ieXRHbHqWoTwp29YLvmcFQII2tQdmXAo4=')
 #FIELD_ENCRYPTION_KEY = os.environ.get('FIELD_ENCRYPTION_KEY', 'NV8kgxe26LQ9qRzWJPyddGSnbYqWxJfFB6uOoQ1IzW4=')
 from test_django_encrypted_json_fields.utils import get_field_encryption_key
-FIELD_ENCRYPTION_KEY = get_field_encryption_key
+EJF_ENCRYPTION_KEYS = get_field_encryption_key
 
 SHOW_RAW_FIELDS = True
 
-FIELD_SKIP_ENCRYPTION = False
+EJF_DISABLE_ENCRYPTION = False
 
 

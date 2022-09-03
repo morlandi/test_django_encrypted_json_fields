@@ -6,11 +6,20 @@ from .models import SampleModel
 
 @admin.register(Key)
 class KeyAdmin(admin.ModelAdmin):
-    pass
+    list_display  = [
+        'value',
+        'updated',
+    ]
 
 
 @admin.register(SampleModel)
 class SampleModelAdmin(admin.ModelAdmin):
+
+    list_display  = [
+        'pk',
+        'text_encrypted',
+        'json_encrypted',
+    ]
 
     readonly_fields = [
         'raw_text_encrypted',
