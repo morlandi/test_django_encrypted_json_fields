@@ -50,18 +50,20 @@ class SampleModel(models.Model):
         #     return self.title
         return str(self.id)
 
-    def retrieve_raw_field(self, fieldname):
-        sql = "select %s from %s_%s where id=%s" % (fieldname, self._meta.app_label, self._meta.model_name, self.id)
-        with connection.cursor() as cursor:
-            cursor.execute(sql)
-            row = cursor.fetchone()
-        return row[0]
+    # def retrieve_raw_field(self, fieldname):
+    #     sql = "select %s from %s_%s where id=%s" % (fieldname, self._meta.app_label, self._meta.model_name, self.id)
+    #     with connection.cursor() as cursor:
+    #         cursor.execute(sql)
+    #         row = cursor.fetchone()
+    #     return row[0]
 
     def raw_text_encrypted(self):
-        return self.retrieve_raw_field('text_encrypted')
+        #return self.retrieve_raw_field('text_encrypted')
+        return fields.fetch_raw_field_value(self, 'text_encrypted')
 
     def raw_json_encrypted(self):
-        return self.retrieve_raw_field('json_encrypted')
+        #return self.retrieve_raw_field('json_encrypted')
+        return fields.fetch_raw_field_value(self, 'json_encrypted')
 
     def json_prettified(self):
         obj = self.json_encrypted
