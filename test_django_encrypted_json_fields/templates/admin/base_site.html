@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrastyle %}
+    {{ block.super }}
+
+    <style>
+        .fieldBox.field-raw_text_encrypted,
+        .fieldBox.field-raw_json_encrypted {
+            color: #7AAEC8;
+        }
+        .fieldBox.field-raw_text_encrypted label,
+        .fieldBox.field-raw_json_encrypted label {
+            color: #ccc;
+        }
+    </style>
+
+{% endblock extrastyle %}

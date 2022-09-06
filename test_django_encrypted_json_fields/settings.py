@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'test_django_encrypted_json_fields',
     'django_light',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'encrypted_json_fields',
-    'test_django_encrypted_json_fields',
 ]
 
 MIDDLEWARE = [
